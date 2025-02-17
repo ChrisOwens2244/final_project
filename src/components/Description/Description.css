@@ -1,0 +1,42 @@
+.desc {
+  margin: 0;
+  padding: 40px 104px;
+  display: flex;
+  flex-direction: column;
+}
+
+.desc__title {
+  margin: 0 0 28px 0;
+  padding: 0;
+  font-family: "Roboto";
+  font-weight: 400;
+  size: 18px;
+  line-height: 1.4;
+  color: #1a1b22;
+  opacity: 50%;
+}
+
+.desc__user {
+  width: 530px;
+  font-family: "Roboto Slab";
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 1.15;
+  color: #1a1b22;
+}
+
+.desc__key-box {
+  margin: 0 0 16px 0;
+  padding: 0;
+  font-family: "Roboto";
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+.desc__key-open {
+  font-weight: 400;
+}
+
+.desc__keys {
+  font-weight: 700;
+}

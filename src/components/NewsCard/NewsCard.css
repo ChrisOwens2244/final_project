@@ -1,0 +1,210 @@
+.card {
+  width: 400px;
+  height: fit-content;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+}
+
+.card__image-box {
+  height: 277px;
+  margin: 0 0 20px 0;
+  padding: 0;
+}
+
+.card__image {
+  max-width: 400px;
+  margin: 0;
+  padding: 0;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+}
+
+.card__keyword {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  border-radius: 10px;
+  padding: 8px 22px;
+  margin: 0;
+  background-color: white;
+  font-family: "Roboto";
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.71;
+}
+
+.card__keyword_visible {
+  visibility: visible;
+}
+
+.card__keyword_hidden {
+  visibility: hidden;
+}
+
+.card__top {
+  display: inline-block;
+  position: absolute;
+  top: 24px;
+  right: 10px;
+}
+
+.card__save-btn {
+  border-radius: 10px;
+  margin: 8px 22px;
+  background-color: white;
+  cursor: pointer;
+  border: none;
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-image: url(../../assets/bookmark.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.card__save-btn:hover {
+  background-image: url(../../assets/bookmark_hover.svg);
+}
+
+.card__save-btn_saved {
+  background-image: url(../../assets/bookmark_checked.svg);
+}
+
+.card__save-btn_saved:hover {
+  background-image: url(../../assets/bookmark_checked.svg);
+}
+
+.card__save-btn_no-logged:hover .card__popup {
+  display: inline-block;
+}
+
+.card__delete-btn {
+  border-radius: 10px;
+  margin: 8px 22px;
+  background-color: white;
+  background-image: url(../../assets/delete.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  border: none;
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+}
+
+.card__delete-btn:hover {
+  background-image: url(../../assets/trash_hover.svg);
+}
+
+.card__delete-btn:hover .card__popup {
+  display: inline-block;
+}
+
+.card__popup {
+  display: none;
+  position: absolute;
+  border-radius: 10px;
+  margin: 11px 20px;
+  background-color: white;
+  font-family: "Roboto";
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.72;
+}
+
+.card__text {
+  margin: 20px 24px 24px 24px;
+  padding: 0;
+}
+
+.card__date {
+  font-family: "Source Sans Pro";
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: #b6bcbf;
+  margin: 0 0 12px 0;
+  padding: 0;
+}
+
+.card__title {
+  width: 352px;
+  height: 60px;
+  font-family: "Roboto Slab";
+  font-size: 26px;
+  font-weight: 400;
+  line-height: 1.15;
+  color: #1a1b22;
+  margin: 0 0 16px 0;
+  padding: 0;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -webkit-line-clamp: 3;
+  display: -webkit-box;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.card__desc {
+  width: 352px;
+  height: 110px;
+  font-family: "Roboto";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.375;
+  color: #1a1b22;
+  margin: 0 0 40px 0;
+  padding: 0;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -webkit-line-clamp: 4;
+  display: -webkit-box;
+  line-clamp: 4;
+  -webkit-box-orient: vertical;
+}
+
+.card__pub {
+  font-family: "Roboto Slab";
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: 0.4px;
+  color: #b6bcbf;
+  margin: 0;
+  padding: 0;
+}
+
+@media screen and (max-width: 1230px) {
+  .card {
+    max-width: 224px;
+    max-height: 420px;
+  }
+
+  .card__image-box {
+    max-width: 224px;
+    margin-bottom: 16px;
+  }
+
+  .card__image {
+    max-width: 224px;
+  }
+
+  .card__title {
+    font-size: 22px;
+    max-width: 192px;
+    max-height: 72px;
+  }
+
+  .card__desc {
+    max-width: 192px;
+    max-height: 88px;
+    font-size: 16px;
+    margin-bottom: 12px;
+  }
+}
