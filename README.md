@@ -11,4 +11,4 @@ This project is a demonstartation of the skill that Christopher Owens has learne
 ## Links
 
 -Repository
--GitHub Pages deployment: https://chirsowens2244.github.io/final_project/
+-GitHub Pages deployment: https://chrisowens2244.github.io/final_project/
