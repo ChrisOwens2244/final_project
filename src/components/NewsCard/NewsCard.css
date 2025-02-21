@@ -1,40 +1,39 @@
 .card {
   width: 400px;
-  height: fit-content;
+  height: 578px;
   position: relative;
   display: flex;
   flex-direction: column;
   background-color: white;
-  border-top-left-radius: 40px;
-  border-top-right-radius: 40px;
+  border-radius: 10px;
+  overflow: hidden;
 }
 
 .card__image-box {
   height: 277px;
   margin: 0 0 20px 0;
   padding: 0;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
 }
 
 .card__image {
-  max-width: 400px;
+  width: 400px;
   margin: 0;
   padding: 0;
-  border-top-left-radius: 40px;
-  border-top-right-radius: 40px;
 }
 
 .card__keyword {
-  position: absolute;
-  top: 24px;
-  left: 24px;
   border-radius: 10px;
-  padding: 8px 22px;
   margin: 0;
+  padding: 8px 22px;
   background-color: white;
-  font-family: "Roboto";
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
   font-size: 14px;
   font-weight: 500;
   line-height: 1.71;
+  float: right;
 }
 
 .card__keyword_visible {
@@ -46,16 +45,18 @@
 }
 
 .card__top {
-  display: inline-block;
+  display: flex;
   position: absolute;
-  top: 24px;
-  right: 10px;
+  margin: 0;
+  padding: 24px;
+  justify-content: space-between;
+  width: 85%;
 }
 
 .card__save-btn {
   border-radius: 10px;
-  margin: 8px 22px;
   background-color: white;
+
   cursor: pointer;
   border: none;
   position: relative;
@@ -80,12 +81,16 @@
 }
 
 .card__save-btn_no-logged:hover .card__popup {
-  display: inline-block;
+  display: flex;
+  position: absolute;
+  right: 105%;
+  bottom: 3%;
+  width: fit-content;
 }
 
 .card__delete-btn {
   border-radius: 10px;
-  margin: 8px 22px;
+
   background-color: white;
   background-image: url(../../assets/delete.svg);
   background-position: center;
@@ -103,19 +108,25 @@
 }
 
 .card__delete-btn:hover .card__popup {
-  display: inline-block;
+  display: flex;
+  position: absolute;
+  right: 100%;
+  width: fit-content;
 }
 
 .card__popup {
   display: none;
-  position: absolute;
   border-radius: 10px;
-  margin: 11px 20px;
+  padding: 11px 26px;
+  margin: 0;
   background-color: white;
-  font-family: "Roboto";
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
   font-size: 12px;
   font-weight: 500;
   line-height: 1.72;
+  min-width: 159px;
+  text-align: center;
+  max-height: 40px;
 }
 
 .card__text {
@@ -124,7 +135,7 @@
 }
 
 .card__date {
-  font-family: "Source Sans Pro";
+  font-family: "Source Sans Pro", Arial, Helvetica, sans-serif;
   font-size: 18px;
   font-weight: 400;
   line-height: 1.4;
@@ -136,7 +147,7 @@
 .card__title {
   width: 352px;
   height: 60px;
-  font-family: "Roboto Slab";
+  font-family: "Roboto Slab", Arial, Helvetica, sans-serif;
   font-size: 26px;
   font-weight: 400;
   line-height: 1.15;
@@ -149,17 +160,19 @@
   display: -webkit-box;
   line-clamp: 3;
   -webkit-box-orient: vertical;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .card__desc {
   width: 352px;
   height: 110px;
-  font-family: "Roboto";
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 1.375;
   color: #1a1b22;
-  margin: 0 0 40px 0;
+  margin: 0 0 auto 0;
   padding: 0;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -170,7 +183,7 @@
 }
 
 .card__pub {
-  font-family: "Roboto Slab";
+  font-family: "Roboto Slab", Arial, Helvetica, sans-serif;
   font-size: 16px;
   font-weight: 700;
   line-height: 1.25;
@@ -182,29 +195,65 @@
 
 @media screen and (max-width: 1230px) {
   .card {
-    max-width: 224px;
-    max-height: 420px;
+    width: 224px;
+    height: 420px;
   }
 
   .card__image-box {
-    max-width: 224px;
+    width: 224px;
+    height: 150px;
     margin-bottom: 16px;
   }
 
   .card__image {
-    max-width: 224px;
+    width: 224px;
   }
 
   .card__title {
     font-size: 22px;
-    max-width: 192px;
-    max-height: 72px;
+    width: 192px;
+    height: 72px;
   }
 
   .card__desc {
-    max-width: 192px;
-    max-height: 88px;
+    width: 192px;
+    height: 88px;
     font-size: 16px;
     margin-bottom: 12px;
+  }
+
+  .card__delete-btn:hover .card__popup {
+    display: none;
+  }
+
+  .card__save-btn:hover .card__popup {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 710px) {
+  .card {
+    width: 288px;
+    height: 440px;
+  }
+
+  .card__image {
+    width: 288px;
+  }
+
+  .card__image-box {
+    width: 288px;
+    height: 196px;
+  }
+
+  .card__text {
+    width: 256px;
+    margin: 16px;
+    padding: 0;
+  }
+
+  .card__title {
+    width: 256px;
+    height: 48px;
   }
 }

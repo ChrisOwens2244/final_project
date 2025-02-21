@@ -10,37 +10,39 @@ function ModalWithForm({
   buttonState,
 }) {
   return (
-    <div className={`modal ${isOpen && "modal_opened"}`}>
-      <div className="modal__content">
-        <h1 className="modal__title">{title}</h1>
-        <button
-          className="modal__close"
-          type="button"
-          onClick={handleCloseClick}
-        />
-        <form className="modal__form" onSubmit={onSubmit}>
-          {children}
-          <div className="modal__buttons">
-            <button
-              type="submit"
-              className={`modal__submit modal__submit_${buttonState}`}
-            >
-              {buttonText}
-            </button>
-            <div className="modal__switch">
-              <p className="modal__or">{"or "}</p>
+    <section>
+      <div className={`modal ${isOpen && "modal_opened"}`}>
+        <div className="modal__content">
+          <h1 className="modal__title">{title}</h1>
+          <button
+            className="modal__close"
+            type="button"
+            onClick={handleCloseClick}
+          />
+          <form className="modal__form" onSubmit={onSubmit}>
+            {children}
+            <div className="modal__buttons">
               <button
-                type="button"
-                className="modal__switch-btn"
-                onClick={onSwitch}
+                type="submit"
+                className={`modal__submit modal__submit_${buttonState}`}
               >
-                {switchText}
+                {buttonText}
               </button>
+              <div className="modal__switch">
+                <p className="modal__or">{"or "}</p>
+                <button
+                  type="button"
+                  className="modal__switch-btn"
+                  onClick={onSwitch}
+                >
+                  {switchText}
+                </button>
+              </div>
             </div>
-          </div>
-        </form>
+          </form>
+        </div>
       </div>
-    </div>
+    </section>
   );
 }
 export default ModalWithForm;

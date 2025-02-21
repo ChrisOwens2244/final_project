@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import CurrentUserContext from "../../context/CurrentUserContext";
+import noImage from "../../assets/not-found_v1.svg";
 
 function NewsCard({ news, keyword, isLoggedIn, currentPage, handleSave }) {
   const user = useContext(CurrentUserContext);
@@ -24,6 +25,8 @@ function NewsCard({ news, keyword, isLoggedIn, currentPage, handleSave }) {
     year: "numeric",
   });
 
+  const imageUsed = !news?.urlToImage ? noImage : news?.urlToImage;
+
   function saveCard() {
     if (isLoggedIn) {
       const article = {
@@ -44,13 +47,12 @@ function NewsCard({ news, keyword, isLoggedIn, currentPage, handleSave }) {
   return (
     <div className="card">
       <div className="card__image-box">
-        <img className="card__image" src={news?.urlToImage} alt="news image" />
+        <img className="card__image" src={imageUsed} alt="news image" />
       </div>
-
-      <p className={keywordName}>{keyword}</p>
 
       {currentPage === "home" ? (
         <div className="card__top">
+          <p className={keywordName}>{keyword}</p>
           <button
             type="button"
             className={`${buttonName} ${buttonState}`}
@@ -61,6 +63,7 @@ function NewsCard({ news, keyword, isLoggedIn, currentPage, handleSave }) {
         </div>
       ) : (
         <div className="card__top">
+          <p className={keywordName}>{keyword}</p>
           <button type="button" className="card__delete-btn" onClick={saveCard}>
             <p className="card__popup">Remove atricle from account</p>
           </button>

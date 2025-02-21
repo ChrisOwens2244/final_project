@@ -26,23 +26,25 @@ function Saved({
         handleLogOutButton={handleLogOutButton}
       />
       <Description className="saved__desc" keywords={keywords} />
-      <div className="saved__container">
-        <ul className="container__news">
-          {articles?.map((item) => {
-            return (
-              <NewsCard
-                news={item}
-                isLoggedIn={isLoggedIn}
-                key={item?._id}
-                keyword={item?.keyword}
-                popupText={"sign in to save articles"}
-                currentPage={"saved"}
-                handleSave={handleSave}
-              />
-            );
-          })}
-        </ul>
-      </div>
+      <section>
+        <div className="saved__container">
+          <ul className="container__news">
+            {articles?.map((item) => {
+              return (
+                <NewsCard
+                  news={item}
+                  isLoggedIn={isLoggedIn}
+                  key={item?._id}
+                  keyword={item?.keyword}
+                  popupText={"sign in to save articles"}
+                  currentPage={"saved"}
+                  handleSave={handleSave}
+                />
+              );
+            })}
+          </ul>
+        </div>
+      </section>
     </div>
   );
 }

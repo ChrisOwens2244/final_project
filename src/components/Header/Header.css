@@ -1,31 +1,116 @@
 .header {
   height: 80px;
   margin: 0;
-  padding: 0 104px;
+  padding: 0 104px 0 104px;
   background-color: transparent;
   border-bottom: 1px solid white;
-  mix-blend-mode: difference;
   display: flex;
+  position: relative;
+}
+
+.header__main {
+  margin: 0;
+  margin-right: auto;
+  display: flex;
+  justify-content: space-between;
+  border: none;
+}
+
+.header_saved {
+  border-bottom: 1px solid black;
 }
 
 .header__name {
   margin: 30px auto 26px 0;
-  font-family: "Roboto Slab";
+  font-family: "Roboto Slab", Arial, Helvetica, sans-serif;
   font-weight: 700;
   font-size: 20px;
   line-height: 1.2;
   color: white;
-  filter: grayscale(1);
-  mix-blend-mode: difference;
+}
+
+.header__name_saved {
+  color: black;
 }
 
 .header__buttons {
   margin: 0;
   padding: 0;
+  display: flex;
+}
+
+.header__burger {
+  display: none;
+  margin-left: auto;
+}
+
+@media screen and (max-width: 1250px) {
+  .header {
+    padding: 40px;
+  }
 }
 
 @media screen and (max-width: 710px) {
   .header {
+    padding: 0;
+    flex-direction: column;
+    width: none;
+    border-bottom: none;
+  }
+
+  .header__main {
+    display: flex;
     padding: 0 16px;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    background-color: transparent;
+    border-bottom: 1px solid white;
+  }
+
+  .header__main_on {
+    background-color: #1a1b22;
+  }
+
+  .header__name {
+    margin-right: auto;
+  }
+
+  .header__name_on-burger {
+    color: white;
+  }
+
+  .header__buttons {
+    display: none;
+  }
+
+  .header__buttons_burger {
+    display: inline-block;
+    min-width: 320px;
+  }
+
+  .header__burger {
+    display: flex;
+    margin: 0;
+    margin-left: auto;
+    width: 24px;
+    height: 24px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent;
+    border-style: none;
+    cursor: pointer;
+  }
+
+  .header__burger_white {
+    background-image: url(../../assets/menu.svg);
+  }
+
+  .header__burger_black {
+    background-image: url(../../assets/menu_black.svg);
+  }
+
+  .header__burger_close {
+    background-image: url(../../assets/close.svg);
   }
 }
