@@ -8,7 +8,7 @@
 .desc__title {
   margin: 0 0 28px 0;
   padding: 0;
-  font-family: "Roboto";
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
   font-weight: 400;
   size: 18px;
   line-height: 1.4;
@@ -18,7 +18,7 @@
 
 .desc__user {
   width: 530px;
-  font-family: "Roboto Slab";
+  font-family: "Roboto Slab", Arial, Helvetica, sans-serif;
   font-weight: 400;
   font-size: 40px;
   line-height: 1.15;
@@ -28,7 +28,7 @@
 .desc__key-box {
   margin: 0 0 16px 0;
   padding: 0;
-  font-family: "Roboto";
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
   font-size: 18px;
   line-height: 1.4;
 }
@@ -39,4 +39,24 @@
 
 .desc__keys {
   font-weight: 700;
+}
+
+@media screen and (max-width: 710px) {
+  .desc {
+    padding: 8px 16px 32px 16px;
+  }
+
+  .desc__title {
+    font-size: 12px;
+    margin-bottom: 16px;
+    height: 24px;
+  }
+
+  .desc__user {
+    width: 288px;
+    height: 68px;
+    font-size: 30px;
+    margin-bottom: 50px;
+    text-align: left;
+  }
 }

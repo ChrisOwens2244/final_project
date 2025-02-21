@@ -13,14 +13,14 @@ function Description({ keywords }) {
           uniqueKeys?.length - 2
         } more`;
   return (
-    <div className="desc">
-      <h1 className="desc_title">Saved Articles</h1>
+    <section className="desc">
+      <h1 className="desc__title">Saved Articles</h1>
       <h2 className="desc__user">{`${userName}, you have ${keywords?.length} saved articles.`}</h2>
       <div className="desc__key-box">
         <span className="desc__key-open">By Keywords: </span>
         <span className="desc__keys">{keys}</span>
       </div>
-    </div>
+    </section>
   );
 }
 export default Description;

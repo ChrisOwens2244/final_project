@@ -5,12 +5,21 @@ function RegisterModal({ isOpen, onRegister, onCloseModal, handleSwitch }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [name, setName] = useState("");
+  const [buttonState, setButtonState] = useState("disabled");
 
   useEffect(() => {
     setEmail("");
     setPassword("");
     setName("");
   }, [isOpen]);
+
+  useEffect(() => {
+    if (email != "" && password != "" && name != "") {
+      setButtonState("enabled");
+    } else {
+      setButtonState("disabled");
+    }
+  }, [email, password]);
 
   const handleEmailChange = (e) => {
     setEmail(e.target.value);
@@ -41,6 +50,7 @@ function RegisterModal({ isOpen, onRegister, onCloseModal, handleSwitch }) {
       onSubmit={handleSubmit}
       switchText="Log In"
       onSwitch={handleSwitch}
+      buttonState={buttonState}
     >
       <label htmlFor="email" className="modal__label">
         Email
@@ -54,7 +64,7 @@ function RegisterModal({ isOpen, onRegister, onCloseModal, handleSwitch }) {
           minLength="1"
           required
         />
-        <span className="modal__error modal__error_email"></span>
+        <p className="modal__error">Invalid email</p>
       </label>
       <label htmlFor="password" className="modal__label">
         Password
@@ -65,11 +75,11 @@ function RegisterModal({ isOpen, onRegister, onCloseModal, handleSwitch }) {
           placeholder="Password"
           value={password}
           onChange={handlePasswordChange}
-          minLength="1"
+          minLength="2"
           maxLength="39"
           required
         />
-        <span className="modal__error modal__error_password"></span>
+        <p className="modal__error">Invalid Password</p>
       </label>
       <label htmlFor="name" className="modal__label">
         Name
@@ -82,7 +92,7 @@ function RegisterModal({ isOpen, onRegister, onCloseModal, handleSwitch }) {
           onChange={handleNameChange}
           maxLength="39"
         />
-        <span className="modal__error modal__error_name"></span>
+        <p className="modal__error">Invalid name</p>
       </label>
     </ModalWithForm>
   );

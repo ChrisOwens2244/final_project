@@ -186,26 +186,30 @@ function App() {
             <Route
               path="/"
               element={
-                <Main
-                  isLoggedIn={isLoggedIn}
-                  toSearch={handleSearch}
-                  handleLogInButton={handleLoginClick}
-                  handleLogOutButton={logout}
-                  handleSave={handleCardSave}
-                />
+                <main>
+                  <Main
+                    isLoggedIn={isLoggedIn}
+                    toSearch={handleSearch}
+                    handleLogInButton={handleLoginClick}
+                    handleLogOutButton={logout}
+                    handleSave={handleCardSave}
+                  />
+                </main>
               }
             />
             <Route
               path="/saved-news"
               element={
                 <ProtectedRoute isLoggedIn={isLoggedIn}>
-                  <Saved
-                    isLoggedIn={isLoggedIn}
-                    handleLogInButton={handleLoginClick}
-                    handleLogOutButton={logout}
-                    handleSave={handleCardSave}
-                    getArticles={getArticles}
-                  />
+                  <main>
+                    <Saved
+                      isLoggedIn={isLoggedIn}
+                      handleLogInButton={handleLoginClick}
+                      handleLogOutButton={logout}
+                      handleSave={handleCardSave}
+                      getArticles={getArticles}
+                    />
+                  </main>
                 </ProtectedRoute>
               }
             />

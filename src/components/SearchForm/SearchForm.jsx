@@ -49,54 +49,56 @@ function SearchForm({
   }, [results]);
 
   return (
-    <div className="search">
-      <div className="search__top">
-        <Header
-          className="main__header"
-          isLoggedIn={isLoggedIn}
-          currentPage={"home"}
-          handleLogInButton={handleLogInButton}
-          handleLogOutButton={handleLogOutButton}
-        />
-        <h1 className="search__title">What is going on in the world?</h1>
-        <h2 className="search__desc">
-          Find the latest news on any topic and save them in your personal
-          account
-        </h2>
-        <form className="search__form" onSubmit={onSearch}>
-          <input
-            className="search__input"
-            type="search"
-            placeholder="Enter topic"
-            value={keyword}
-            onChange={handleSearchChange}
-            minLength="1"
-            required
-          />
-          <button className="search__btn" type="submit">
-            Search
-          </button>
-        </form>
-      </div>
-
-      {isLoading ? (
-        <Preloader />
-      ) : isEmpty ? (
-        <></>
-      ) : isNoResults ? (
-        <>
-          <NoResults isError={isError} />
-        </>
-      ) : (
-        <>
-          <NewsCardContainer
+    <section>
+      <div className="search">
+        <div className="search__top">
+          <Header
+            className="main__header"
             isLoggedIn={isLoggedIn}
-            word={keyword}
-            handleSave={handleSave}
+            currentPage={"home"}
+            handleLogInButton={handleLogInButton}
+            handleLogOutButton={handleLogOutButton}
           />
-        </>
-      )}
-    </div>
+          <h1 className="search__title">What is going on in the world?</h1>
+          <h2 className="search__desc">
+            Find the latest news on any topic and save them in your personal
+            account
+          </h2>
+          <form className="search__form" onSubmit={onSearch}>
+            <input
+              className="search__input"
+              type="search"
+              placeholder="Enter topic"
+              value={keyword}
+              onChange={handleSearchChange}
+              minLength="1"
+              required
+            />
+            <button className="search__btn" type="submit">
+              Search
+            </button>
+          </form>
+        </div>
+
+        {isLoading ? (
+          <Preloader />
+        ) : isEmpty ? (
+          <></>
+        ) : isNoResults ? (
+          <>
+            <NoResults isError={isError} />
+          </>
+        ) : (
+          <>
+            <NewsCardContainer
+              isLoggedIn={isLoggedIn}
+              word={keyword}
+              handleSave={handleSave}
+            />
+          </>
+        )}
+      </div>
+    </section>
   );
 }
 
