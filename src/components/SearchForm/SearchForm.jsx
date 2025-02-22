@@ -6,13 +6,7 @@ import NoResults from "../NoResults/NoResults";
 import NewsCardContainer from "../NewsCardContainer/NewsCardContainer";
 import CurrentNewsContext from "../../context/CurrentNewsContext";
 
-function SearchForm({
-  toSearch,
-  isLoggedIn,
-  handleSave,
-  handleLogInButton,
-  handleLogOutButton,
-}) {
+function SearchForm({ toSearch, isLoggedIn, handleSave }) {
   const [isLoading, setIsLoading] = useState(false);
   const [isEmpty, setIsEmpty] = useState(true);
   const [keyword, setKeyword] = useState("");
@@ -52,13 +46,6 @@ function SearchForm({
     <section>
       <div className="search">
         <div className="search__top">
-          <Header
-            className="main__header"
-            isLoggedIn={isLoggedIn}
-            currentPage={"home"}
-            handleLogInButton={handleLogInButton}
-            handleLogOutButton={handleLogOutButton}
-          />
           <h1 className="search__title">What is going on in the world?</h1>
           <h2 className="search__desc">
             Find the latest news on any topic and save them in your personal

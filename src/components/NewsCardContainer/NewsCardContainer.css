@@ -65,6 +65,11 @@
     padding: 0;
     gap: 11px;
   }
+
+  .container__title {
+    margin-left: 16px;
+  }
+
   .container__news {
     grid-template-columns: repeat(1, minmax(min-content, max-content));
     margin: auto;

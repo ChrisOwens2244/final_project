@@ -8,9 +8,6 @@
 }
 
 .search__top {
-  background-image: url(../../assets/search_background.png);
-  background-size: cover;
-  background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
   margin: 0;

@@ -32,7 +32,7 @@ function NewsCardContainer({ isLoggedIn, word, handleSave }) {
     <section>
       <div className="container">
         <>
-          <h1 className="container__title">Search Results</h1>
+          <h2 className="container__title">Search Results</h2>
           <ul className="container__news">
             {displayed?.map((item) => {
               return (

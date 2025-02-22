@@ -46,13 +46,13 @@
 
 @media screen and (max-width: 1250px) {
   .header {
-    padding: 40px;
+    padding: 0 40px;
   }
 }
 
 @media screen and (max-width: 710px) {
   .header {
-    padding: 0;
+    padding: 0 0;
     flex-direction: column;
     width: none;
     border-bottom: none;

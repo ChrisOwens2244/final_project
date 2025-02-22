@@ -71,7 +71,7 @@ function NewsCard({ news, keyword, isLoggedIn, currentPage, handleSave }) {
       )}
 
       <div className="card__text">
-        <h1 className="card__date">{date}</h1>
+        <h2 className="card__date">{date}</h2>
         <a className="card__title" href={news?.url}>
           {news?.title}
         </a>

@@ -14,8 +14,8 @@ function Description({ keywords }) {
         } more`;
   return (
     <section className="desc">
-      <h1 className="desc__title">Saved Articles</h1>
-      <h2 className="desc__user">{`${userName}, you have ${keywords?.length} saved articles.`}</h2>
+      <h2 className="desc__title">Saved Articles</h2>
+      <h3 className="desc__user">{`${userName}, you have ${keywords?.length} saved articles.`}</h3>
       <div className="desc__key-box">
         <span className="desc__key-open">By Keywords: </span>
         <span className="desc__keys">{keys}</span>
