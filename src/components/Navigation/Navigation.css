@@ -16,12 +16,17 @@
   font-weight: 500px;
   font-size: 18px;
   line-height: 1.4;
-  color: white;
   text-decoration: none;
   cursor: pointer;
 }
+.nav__link_white {
+  color: white;
+}
 
-.nav__link_highlight-whtie {
+.nav__link_black {
+  color: black;
+}
+.nav__link_highlight-white {
   border-bottom: 3px solid white;
   color: white;
 }

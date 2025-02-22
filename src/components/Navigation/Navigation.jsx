@@ -15,11 +15,11 @@ function Navigation({
   const homeName =
     currentPage === "home"
       ? "nav__link nav__link_highlight-white"
-      : "nav__link";
+      : "nav__link nav__link_black";
   const savedName =
     currentPage === "saved"
       ? "nav__link nav__link_highlight-black"
-      : "nav__link";
+      : "nav__link nav__link_white";
 
   const imageUsed = currentPage === "home" || isBurger ? logout : logoutBlack;
   return (
