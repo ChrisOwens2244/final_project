@@ -186,7 +186,6 @@ function App() {
             <Route
               path="/"
               element={
-                <main>
                   <Main
                     isLoggedIn={isLoggedIn}
                     toSearch={handleSearch}
@@ -194,14 +193,12 @@ function App() {
                     handleLogOutButton={logout}
                     handleSave={handleCardSave}
                   />
-                </main>
               }
             />
             <Route
               path="/saved-news"
               element={
                 <ProtectedRoute isLoggedIn={isLoggedIn}>
-                  <main>
                     <Saved
                       isLoggedIn={isLoggedIn}
                       handleLogInButton={handleLoginClick}
@@ -209,7 +206,6 @@ function App() {
                       handleSave={handleCardSave}
                       getArticles={getArticles}
                     />
-                  </main>
                 </ProtectedRoute>
               }
             />

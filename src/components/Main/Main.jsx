@@ -1,5 +1,6 @@
 import About from "../About/About";
 import SearchForm from "../SearchForm/SearchForm";
+import Header from "../Header/Header";
 
 function Main({
   isLoggedIn,
@@ -9,8 +10,15 @@ function Main({
   handleSave,
 }) {
   return (
-    <div className="main">
+    <main className="main">
       <div className="main__top">
+        <Header
+          className="main__header"
+          isLoggedIn={isLoggedIn}
+          currentPage={"home"}
+          handleLogInButton={handleLogInButton}
+          handleLogOutButton={handleLogOutButton}
+        />
         <SearchForm
           className="main__search"
           toSearch={toSearch}
@@ -21,7 +29,7 @@ function Main({
         />
       </div>
       <About />
-    </div>
+    </main>
   );
 }
 export default Main;

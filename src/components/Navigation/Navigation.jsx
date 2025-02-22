@@ -13,9 +13,13 @@ function Navigation({
 }) {
   const user = useContext(CurrentUserContext);
   const homeName =
-    currentPage === "home" ? "nav__home nav__home_highlight" : "nav__home";
+    currentPage === "home"
+      ? "nav__link nav__link_highlight-white"
+      : "nav__link";
   const savedName =
-    currentPage === "saved" ? "nav__save nav__save_highlight" : "nav__save";
+    currentPage === "saved"
+      ? "nav__link nav__link_highlight-black"
+      : "nav__link";
 
   const imageUsed = currentPage === "home" || isBurger ? logout : logoutBlack;
   return (
@@ -29,7 +33,7 @@ function Navigation({
             Saved Articles
           </NavLink>
           <button
-            className={`nav__logout nav__logout_${currentPage}`}
+            className={`nav__button nav__button_${currentPage}`}
             type="button"
             onClick={handleLogOutButton}
           >
@@ -42,7 +46,7 @@ function Navigation({
       ) : (
         <div>
           <button
-            className={`nav__login nav__login_${currentPage}`}
+            className={`nav__button nav__button_${currentPage}`}
             type="button"
             onClick={handleLogInButton}
           >

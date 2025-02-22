@@ -7,7 +7,7 @@ function NoResults({ isError }) {
   return (
     <div className="none">
       <img className="none__image" src={notFound} alt="Not found" />
-      <h1 className="none__title">{title}</h1>
+      <h2 className="none__title">{title}</h2>
       <p className="none__desc">{desc}</p>
     </div>
   );
