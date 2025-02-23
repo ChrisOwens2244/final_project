@@ -29,32 +29,28 @@ function NewsCardContainer({ isLoggedIn, word, handleSave }) {
   }, [currentIndex]);
 
   return (
-    <section>
-      <div className="container">
-        <>
-          <h2 className="container__title">Search Results</h2>
-          <ul className="container__news">
-            {displayed?.map((item) => {
-              return (
-                <NewsCard
-                  news={item}
-                  isLoggedIn={isLoggedIn}
-                  key={
-                    !item?.source?.id ? item?.source?.name : item?.source?.id
-                  }
-                  keyword={word}
-                  popupText={"sign in to save articles"}
-                  currentPage="home"
-                  handleSave={handleSave}
-                />
-              );
-            })}
-          </ul>
-          <button className={buttonName} type="button" onClick={addMore}>
-            Show More
-          </button>
-        </>
+    <section className="container">
+      <div className="container__box">
+        <h2 className="container__title">Search Results</h2>
+        <ul className="container__news">
+          {displayed?.map((item) => {
+            return (
+              <NewsCard
+                news={item}
+                isLoggedIn={isLoggedIn}
+                key={!item?.source?.id ? item?.source?.name : item?.source?.id}
+                keyword={word}
+                popupText={"sign in to save articles"}
+                currentPage="home"
+                handleSave={handleSave}
+              />
+            );
+          })}
+        </ul>
       </div>
+      <button className={buttonName} type="button" onClick={addMore}>
+        Show More
+      </button>
     </section>
   );
 }

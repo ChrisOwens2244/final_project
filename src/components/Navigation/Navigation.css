@@ -68,6 +68,27 @@
   color: black;
 }
 
+.nav__link_footer {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-weight: 400px;
+  font-size: 18px;
+  line-height: 1.4;
+  color: #1a1b22;
+  cursor: pointer;
+  text-decoration: none;
+  visibility: visible;
+}
+
+.nav__link_image {
+  padding: 0;
+  margin: 0;
+  height: 24px;
+  width: 24px;
+  cursor: pointer;
+}
+
 @media screen and (max-width: 710px) {
   .nav {
     flex-direction: column;
@@ -85,6 +106,13 @@
     margin: 0 0 22px 0;
     padding: 0;
     line-height: 56px;
+  }
+
+  .nav__link_footer {
+    color: #1a1b22;
+    line-height: 48px;
+    margin: 0;
+    text-align: left;
   }
 
   .nav__button {

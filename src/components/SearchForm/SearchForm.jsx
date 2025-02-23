@@ -46,11 +46,11 @@ function SearchForm({ toSearch, isLoggedIn, handleSave }) {
     <section>
       <div className="search">
         <div className="search__top">
-          <h1 className="search__title">What is going on in the world?</h1>
-          <h2 className="search__desc">
+          <h2 className="search__title">What is going on in the world?</h2>
+          <h3 className="search__desc">
             Find the latest news on any topic and save them in your personal
             account
-          </h2>
+          </h3>
           <form className="search__form" onSubmit={onSearch}>
             <input
               className="search__input"
