@@ -1,8 +1,10 @@
 .desc {
-  margin: 0;
+  margin: auto;
+  max-width: 1440px;
   padding: 40px 104px;
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
 }
 
 .desc__title {

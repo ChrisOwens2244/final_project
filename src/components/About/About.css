@@ -3,14 +3,14 @@
   padding: 80px 104px;
   display: flex;
   justify-content: center;
-  width: 1232px;
+  max-width: 1440px;
 }
 
 .about__image {
   width: 464px;
   height: 464px;
   border-radius: 1000px;
-  margin: 0 auto 0 0;
+  margin: 0 56px 0 0;
   padding: 0;
 }
 
@@ -18,7 +18,7 @@
   width: 600px;
   display: flex;
   flex-direction: column;
-  margin: 0 auto;
+  margin: 0;
   margin-right: 0;
   padding: 0;
 }
@@ -45,16 +45,22 @@
 
 @media screen and (max-width: 1250px) {
   .about {
-    width: 703px;
+    padding: 61px 40px 61px 40px;
   }
 
   .about__image {
     width: 232px;
     height: 232px;
+    margin: 0;
   }
 
   .about__text {
-    width: 424px;
+    max-width: 400px;
+    margin: 0 0 0 32px;
+  }
+
+  .about__desc {
+    max-width: 400px;
   }
 }
 
@@ -62,11 +68,13 @@
   .about {
     flex-direction: column;
     padding: 0;
-    margin: 24px 0 0 0;
+    margin: 24px auto;
+    justify-content: center;
   }
 
   .about__image {
     align-self: center;
+    margin: auto;
   }
 
   .about__text {
