@@ -77,7 +77,6 @@ function LoginModal({ isOpen, onLogin, onCloseModal, handleSwitch }) {
         <p className="modal__error" id="password">
           Password should be at least 5 characters long
         </p>
-        ;
       </label>
     </ModalWithForm>
   );

@@ -33,20 +33,20 @@ function Navigation({
             Saved Articles
           </NavLink>
           <button
-            className={`nav__button nav__button_${currentPage}`}
+            className={`nav__button nav__button_${currentPage} nav__button_logout`}
             type="button"
             onClick={handleLogOutButton}
           >
             <p className={`nav__username nav__username_${currentPage}`}>
               {user?.currentUser?.name}{" "}
             </p>
-            <img className="nav__logout_img" src={imageUsed} alt="logout" />
+            <img className="nav__logout-img" src={imageUsed} alt="logout" />
           </button>
         </>
       ) : (
         <div>
           <button
-            className={`nav__button nav__button_${currentPage}`}
+            className={`nav__button nav__button_${currentPage} nav__button_login`}
             type="button"
             onClick={handleLogInButton}
           >

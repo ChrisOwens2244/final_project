@@ -1,11 +1,12 @@
 .header {
   height: 80px;
-  margin: 0;
+  margin: 0 auto 0 auto;
   padding: 0 104px 0 104px;
   background-color: transparent;
   border-bottom: 1px solid white;
   display: flex;
   position: relative;
+  max-width: 1440px;
 }
 
 .header__main {

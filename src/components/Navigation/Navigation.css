@@ -34,20 +34,34 @@
   border-bottom: 3px solid black;
   color: black;
 }
+
 .nav__button {
   border-radius: 100px;
   margin: 19px 0 13px 0;
   background-color: transparent;
   color: white;
   border: 1px solid white;
-  padding: 12px auto;
+  padding: 12px 19px;
+}
+
+.nav__button_login {
   width: 176px;
-  font-family: "Robot";
+  height: 48px;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
   font-weight: 500px;
   font-size: 18px;
   line-height: 1.4;
   cursor: pointer;
   display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav__button_logout {
+  display: flex;
+  background-color: transparent;
+  height: 48px;
+  gap: 15px;
 }
 
 .nav__button_saved {
@@ -66,6 +80,11 @@
 
 .nav__username_saved {
   color: black;
+}
+
+.nav__logout-img {
+  height: 24px;
+  width: 24px;
 }
 
 .nav__link_footer {
@@ -87,6 +106,21 @@
   height: 24px;
   width: 24px;
   cursor: pointer;
+}
+
+@media screen and (max-width: 1250px) {
+  .nav__button {
+    padding: 8px 12px;
+  }
+
+  .nav__button_login {
+    width: 152px;
+    height: 40px;
+  }
+
+  .nav__button_logout {
+    height: 40px;
+  }
 }
 
 @media screen and (max-width: 710px) {

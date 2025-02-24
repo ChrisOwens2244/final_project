@@ -1,20 +1,25 @@
 .about {
-  margin: 0;
+  margin: 0 auto;
   padding: 80px 104px;
   display: flex;
+  justify-content: center;
+  width: 1232px;
 }
 
 .about__image {
   width: 464px;
   height: 464px;
   border-radius: 1000px;
+  margin: 0 auto 0 0;
+  padding: 0;
 }
 
 .about__text {
   width: 600px;
   display: flex;
   flex-direction: column;
-  margin: 0 auto 0 56px;
+  margin: 0 auto;
+  margin-right: 0;
   padding: 0;
 }
 
@@ -39,9 +44,17 @@
 }
 
 @media screen and (max-width: 1250px) {
+  .about {
+    width: 703px;
+  }
+
   .about__image {
     width: 232px;
     height: 232px;
+  }
+
+  .about__text {
+    width: 424px;
   }
 }
 
@@ -50,7 +63,6 @@
     flex-direction: column;
     padding: 0;
     margin: 24px 0 0 0;
-    justify-content: center;
   }
 
   .about__image {
