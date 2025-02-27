@@ -13,5 +13,5 @@ Adding a proper backend and running the backend and frontend on a cloud server.
 
 ## Links
 
--Repository
+-Repository: https://github.com/ChrisOwens2244/final_project
 -GitHub Pages deployment: https://chrisowens2244.github.io/final_project/
