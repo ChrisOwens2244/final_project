@@ -4,14 +4,14 @@ This project is a demonstartation of the skill that Christopher Owens has learne
 
 ## Technology used
 
--React-Dom
--Routers
--NPM
+- React-Dom
+- Routers
+- NPM
 
 ## Improvements
 Adding a proper backend and running the backend and frontend on a cloud server.
 
 ## Links
 
--Repository: https://github.com/ChrisOwens2244/final_project
--GitHub Pages deployment: https://chrisowens2244.github.io/final_project/
+- Repository: https://github.com/ChrisOwens2244/final_project
+- GitHub Pages deployment: https://chrisowens2244.github.io/final_project/
