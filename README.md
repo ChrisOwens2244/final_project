@@ -9,7 +9,7 @@ This project is a demonstartation of the skill that Christopher Owens has learne
 - NPM
 
 ## Improvements
-Adding a proper backend and running the backend and frontend on a cloud server.
+Adding a proper backend and run the backend and frontend on a cloud server.
 
 ## Links
 
