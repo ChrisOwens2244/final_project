@@ -12,7 +12,7 @@ This project is a demonstartation of the skill that Christopher Owens has learne
 - Vite v5.4.14
 
 ## Instructions 
-Make a local repository for the project then run the command: '''npm run dev'''
+Make a local repository for the project then run the command: ```npm run dev```
 
 ## Improvements
 Adding a proper backend and run the backend and frontend on a cloud server.
