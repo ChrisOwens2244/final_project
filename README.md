@@ -4,9 +4,15 @@ This project is a demonstartation of the skill that Christopher Owens has learne
 
 ## Technology used
 
-- React-Dom
+- React-Dom v18.3.3
+- React v18.3.1
+- React-Router-Dom v18.3.1
 - Routers
 - NPM
+- Vite v5.4.14
+
+## Instructions 
+Make a local repository for the project then run the command: '''npm run dev'''
 
 ## Improvements
 Adding a proper backend and run the backend and frontend on a cloud server.
